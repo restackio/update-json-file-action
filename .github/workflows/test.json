@@ -1,0 +1,8 @@
+{
+  "input": {
+    "test": {
+      "type": "string",
+      "description": "test"
+    }
+  }
+}
