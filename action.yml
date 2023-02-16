@@ -1,11 +1,16 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Set JSON Field'
+description: 'This GitHub Action edits any key in a json file to the provided values'
+author: 'Restack'
 inputs:
-  milliseconds: # change this
+  file:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: "file name/path to edit. e.g 'package.json'"
+  fields:
+    required: true
+    description: "fields to edit. can be nested fields. example: {'a.b.c[0]': 'value_here', 'z.x': 'value_here'}"
 runs:
   using: 'node16'
   main: 'dist/index.js'
+branding:
+  icon: 'layers'
+  color: 'purple'

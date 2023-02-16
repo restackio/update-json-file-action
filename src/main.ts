@@ -1,19 +1,22 @@
-import * as core from '@actions/core'
-import {wait} from './wait'
+import * as core from '@actions/core';
+import fs from 'fs';
+
+import updateJson from './update-json';
 
 async function run(): Promise<void> {
   try {
-    const ms: string = core.getInput('milliseconds')
-    core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
+    const file = core.getInput('file', {required: true});
+    const fields = core.getInput('fields', {required: true});
 
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
+    let data = fs.readFileSync(file, 'utf8');
+    let obj = JSON.parse(data);
+    obj = updateJson(obj, JSON.parse(fields));
 
-    core.setOutput('time', new Date().toTimeString())
+    data = JSON.stringify(obj, null, 2);
+    fs.writeFileSync(file, data, 'utf8');
   } catch (error) {
-    if (error instanceof Error) core.setFailed(error.message)
+    if (error instanceof Error) core.setFailed(error.message);
   }
 }
 
-run()
+run();
