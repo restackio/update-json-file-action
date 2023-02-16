@@ -25,9 +25,9 @@ name: Build and Release
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 env:
   GITHUB_TOKEN: ${{ github.token }}
