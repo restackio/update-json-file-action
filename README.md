@@ -44,5 +44,5 @@ jobs:
       uses: restackio/update-json-file-action@v1.1
       with:
         file: package.json
-        fields: "{'version': '1.2.4'}"
+        fields: "{\"input.test.type\": \"new value\"}"
 ```
