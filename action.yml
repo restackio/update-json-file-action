@@ -1,4 +1,4 @@
-name: 'Set JSON Field'
+name: 'Update Json File'
 description: 'This GitHub Action edits any key in a json file to the provided values'
 author: 'Restack'
 inputs:
