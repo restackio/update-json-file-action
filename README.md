@@ -6,7 +6,7 @@ This GitHub Action edits the provided fields on a provided JSON file
 Add this step in your workflow file
 ```yaml
 - name: Update my-file.json description
-  uses: restackio/update-json-file-action@v1.1
+  uses: restackio/update-json-file-action@v2.1
   with:
     file: my-file.json
     fields: "{'a.b.c': 'value_here', 'a.b.d[0]': 'value_here'}"
@@ -41,7 +41,7 @@ jobs:
     - uses: actions/checkout@v3
  
     - name: Update package.json version
-      uses: restackio/update-json-file-action@v2.0
+      uses: restackio/update-json-file-action@v2.1
       with:
         file: package.json
         fields: "{\"input.test.type\": \"new value\"}"
