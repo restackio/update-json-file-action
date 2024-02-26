@@ -6,7 +6,7 @@ This GitHub Action edits the provided fields on a provided JSON file
 Add this step in your workflow file
 ```yaml
 - name: Update my-file.json description
-  uses: restack/update-json-file-action@v1.1
+  uses: restackio/update-json-file-action@v1.1
   with:
     file: my-file.json
     fields: "{'a.b.c': 'value_here', 'a.b.d[0]': 'value_here'}"
