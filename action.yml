@@ -9,7 +9,7 @@ inputs:
     required: true
     description: "fields to edit. can be nested fields. example: {'a.b.c[0]': 'value_here', 'z.x': 'value_here'}"
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
 branding:
   icon: 'layers'
