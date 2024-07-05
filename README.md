@@ -41,7 +41,7 @@ jobs:
     - uses: actions/checkout@v3
  
     - name: Update package.json version
-      uses: restackio/update-json-file-action@v2.1
+      uses: restackio/update-json-file-action@2.1
       with:
         file: package.json
         fields: "{\"input.test.type\": \"new value\"}"
