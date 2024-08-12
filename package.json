@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.17.4",
-    "@types/node": "^20.2.0",
+    "@types/node": "^22.2.0",
     "@typescript-eslint/parser": "^4.33.0",
     "@vercel/ncc": "^0.31.1",
     "eslint": "^7.32.0",
