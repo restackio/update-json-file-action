@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-    - uses: actions/checkout@v3
+      uses: actions/checkout@v3
  
     - name: Update package.json version
       uses: restackio/update-json-file-action@2.1
